@@ -1,3 +1,4 @@
+"use strict";
 var button = document.querySelector("button");
 // ! tells ts that there the input will not be null 
 var input1 = document.getElementById("num1");

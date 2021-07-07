@@ -1,4 +1,4 @@
-const button = document.querySelector("button");
+const button = document.querySelector("button") as HTMLButtonElement;
 // ! tells ts that there the input will not be null 
 const input1 = document.getElementById("num1")! as HTMLInputElement;
 const input2 = document.getElementById("num2")! as HTMLInputElement;
