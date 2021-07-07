@@ -1,20 +1,15 @@
 "use strict";
-// You can explicitly type out the obj, or let typeScript infer the type
-// const person: 
-// {name: string;
-// age: number;
-// } 
-// = {
-//   name: 'Gabin',
-//   age: 30,
-// };
-const person = {
-    name: 'Gabin',
-    age: 30,
-    hobbies: ['bouldering', 'biking'],
-    roles: [1, 'admin']
-};
-console.log(person.name);
-for (const user of person.hobbies) {
-    console.log(user.toUpperCase());
+function combine(input1, input2) {
+    let result;
+    if (typeof input1 === 'number' && typeof input2 === 'number') {
+        result = input1 + input2;
+    }
+    else {
+        result = input1.toString() + input2.toLocaleString();
+    }
+    return result;
 }
+const combineAges = combine(30, 26);
+console.log(combineAges);
+const combineNames = combine('Max', 'Anna');
+console.log(combineNames);
