@@ -1,4 +1,6 @@
 
+// You can use an aliases type as well to make things smoother
+type Combinable = number | string;
 
 function combine(input1: number | string, input2: number | string) {
   let result;
