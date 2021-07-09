@@ -11,9 +11,16 @@ function printResult(num: number) {
 
 printResult(add(5, 12)); 
 
-let combineValues: Function;
+// let combineValues: Function;
+let combineValues: (a: number, b: number) => number;
 
 combineValues = add;
-combineValues = 5;
+
+// will throw error because we make sure to let TS know we want two parameters, numbers and to return a number
+
+// combineValues = printResult;
+
+// giving combineValues a type of function helps us avoid a runtime error below
+// combineValues = 5;
 
 console.log(combineValues(8, 8));
