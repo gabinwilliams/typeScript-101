@@ -1,23 +1,15 @@
 "use strict";
-function add(n1, n2) {
-    return n1 + n2;
+// undecided at this time, but more restrictive than any
+let userInput;
+let userName;
+userInput = 5;
+userInput = 'Max';
+// requires any extra type check to let TS know you want to assign it a string
+if (typeof userInput === 'string') {
+    userName = userInput;
 }
-function printResult(num) {
-    console.log('Result:' + num);
+// TS infers this as void, but we can hard type it to never which clearly tells developers this function will never return anything
+function generateError(message, code) {
+    throw { message: message, errorCode: code };
 }
-printResult(add(5, 12));
-// let combineValues: Function;
-let combineValues;
-combineValues = add;
-// will throw error because we make sure to let TS know we want two parameters, numbers and to return a number
-// combineValues = printResult;
-// giving combineValues a type of function helps us avoid a runtime error below
-// combineValues = 5;
-console.log(combineValues(8, 8));
-function addAndHandle(n1, n2, cb) {
-    const result = n1 + n2;
-    cb(result);
-}
-addAndHandle(10, 20, (result) => {
-    console.log(result);
-});
+generateError('An error occurred', 500);
