@@ -71,10 +71,15 @@
     "forceConsistentCasingInFileNames": true        /* Disallow inconsistently-cased references to the same file. */
   },
   "exclude": [
-    "node_modules",
+    "node_modules", // would be default if exclude is not written in
+
     // any file with containing that will be excluded in compile
     // "*.dev.ts",
     // any file in any folder including that will be excluded in compile
     // "**/*dev.ts"
-  ]
+  ], 
+  // Only these files will be complied
+  // "include": [
+  //   "app.ts",
+  // ]
 }
